@@ -12,12 +12,14 @@ float main ()
   printf("What is the desired radius range?\n");
   fgets(input, 256, stdin);
 
+  float num
   float r;
   if (sscanf(input, "%f", &num) == 1);
 
   float a;
 
-  for (float r = ; r < ; r++)
+  for (float r = num ; r <  num; r++)
+
 {
   a = areaCircle (r);
 
