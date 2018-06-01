@@ -25,26 +25,16 @@ int main()
   struct Students student1;
   struct Students student2;
 
-  printf("What is your first student's name?\n");
+  printf("Student 1 First Name: \n");
   fgets(input, 256, stdin);
   sscanf(input, "%s", firstname);
-  printf("What is your first student's last name?\n");
+  printf("Student 1 Last Name: \n");
   fgets(input, 256, stdin);
   sscanf(input, "%s", lastname);
-  printf("What is your first student's age?\n");
-  while (1)
-  {
-        fgets(input, 256, stdin);
-        if (sscanf(input, "%d", &age) == 1) break;
-        printf("Not a valid age - try again!\n");
-  }
-  printf("What is your first student's student id?\n");
-  while (1)
-  {
-        fgets(input, 256, stdin);
-        if (sscanf(input, "%d", &studentid) == 1) break;
-        printf("Not a student id - try again!\n");
-  }
+  printf("Student 1 Age: \n");
+  fgets(input, 256, stdin);
+  printf("Student 1 ID: \n");
+  fgets(input, 256, stdin);
 
   strcpy(student1.firstname, firstname);
   strcpy(student1.lastname, lastname);
@@ -55,28 +45,17 @@ int main()
   StudentArr[0].age = age;
   StudentArr[0].studentid = studentid;
 
-  printf("What is your second student's name?\n");
+  printf("Student 2 First Name: \n");
   fgets(input, 256, stdin);
   sscanf(input, "%s", firstname2);
-  printf("What is your second student's last name?\n");
+  printf("Student 2 Last Name: \n");
   fgets(input, 256, stdin);
   sscanf(input, "%s", lastname2);
-  printf("What is your second student's age?\n");
-  while (1)
-  {
-        fgets(input, 256, stdin);
-        if (sscanf(input, "%d", &age2) == 1) break;
-        printf("Not a valid age - try again!\n");
-  }
-  printf("What is your second student's student id?\n");
-  while (1)
-  {
-        fgets(input, 256, stdin);
-        if (sscanf(input, "%d", &stid2) == 1) break;
-        printf("Not a valid age - try again!\n");
-  }
- printf("\n");
-  
+  printf("Student 2 Age: \n");
+  fgets(input, 256, stdin);
+  printf("Student 2 ID: \n");
+  fgets(input, 256, stdin);
+
   strcpy(student2.firstname, firstname2);
   strcpy(student2.lastname, lastname2);
   student2.age = age2;
@@ -85,19 +64,15 @@ int main()
   strcpy(StudentArr[1].lastname, lastname2);
   StudentArr[1].age = age2;
   StudentArr[1].studentid = stid2;
- 
+
   for (int i = 0; i < 2; i++)
          {
         printf("This is student %d:\n", i+1);
         printStudent(&(StudentArr[i]));
         printf("\n");
          }
-//printf("This is student 1\n");
-  //printStudent(&student1);
- // printf("This is student 2\n");
- // printStudent(&student2);
+
 }
- 
 void printStudent(struct Students* student)
 {
   printf(" First name: %s\n", student->firstname);
